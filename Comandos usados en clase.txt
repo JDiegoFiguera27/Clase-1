@@ -1,0 +1,167 @@
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1
+$ git clone ^[[200~https://github.com/JDiegoFiguera27/Clase-1.git~
+Cloning into 'Clase-1.git~'...
+fatal: protocol '?[200~https' is not supported
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1
+$ git clone https://github.com/JDiegoFiguera27/Clase-1.git
+Cloning into 'Clase-1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1
+$ cd Clase-1
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git add *
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git commit -am "Prueba de primer Commit"
+[main 46523cc] Prueba de primer Commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git push
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/JDiegoFiguera27/Clase-1.git
+   851e437..46523cc  main -> main
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git add *
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git commit -am "Segundo commit"
+[main 766e060] Segundo commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/JDiegoFiguera27/Clase-1.git
+   46523cc..766e060  main -> main
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git commit -am "Prueba con Archivos"
+[main cf85af1] Prueba con Archivos
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/JDiegoFiguera27/Clase-1.git
+   766e060..cf85af1  main -> main
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git fetch
+
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+Unpacking objects: 100% (3/3), 1003 bytes | 91.00 KiB/s, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+From https://github.com/JDiegoFiguera27/Clase-1
+   cf85af1..1b84ffe  main       -> origin/main
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git pull
+Updating cf85af1..1b84ffe
+Fast-forward
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git add *
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git commit -m "Prueba de conflicto de Ramas"
+[main 4d5c014] Prueba de conflicto de Ramas
+ 1 file changed, 1 insertion(+)
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git push
+To https://github.com/JDiegoFiguera27/Clase-1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/JDiegoFiguera27/Clase-1.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 991 bytes | 66.00 KiB/s, done.
+From https://github.com/JDiegoFiguera27/Clase-1
+   1b84ffe..247b171  main       -> origin/main
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git pull
+
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git pull
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main|MERGING)
+$ git add *
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main|MERGING)
+$ git commit -m "Solucion de conflicto usando fetch y pull antes de"
+[main bd85e7d] Solucion de conflicto usando fetch y pull antes de
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 601 bytes | 601.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/JDiegoFiguera27/Clase-1.git
+   247b171..bd85e7d  main -> main
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$ ^C
+
+salak401@salak401-36 MINGW64 ~/Documents/Clase1/Clase-1 (main)
+$
