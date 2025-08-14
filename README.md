@@ -5,3 +5,4 @@ Prueba de Archivos Rastreados con -am
 Prueba de Cambios en la nube, usar git fetch y luego git pull
 Prueba de Cambio local de Diferentes Ramas
 Prueba de Cambio en la nube para Diferentes Ramas
+Llevando el Git a mi pc
