@@ -1,12 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #a8c4e9;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(20, 30, 60, 0.95);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0.5em 0;
+            display: flex;
+            gap: 2em;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .navbar a:hover {
+            background: #ffffff;
+        }
+        .content {
+            margin-top: 70px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2em;
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #7bb6ff;
+        }
+        .section {
+            margin-bottom: 3em;
+        }
+        .popup-sobre-mi {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            max-width: 90vw;
+            background: #1a2a47;
+            color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            padding: 2em 1.5em 1.5em 1.5em;
+            z-index: 2000;
+            border: 2px solid #7bb6ff;
+            animation: popupFadeIn 0.2s;
+        }
+        @keyframes popupFadeIn {
+            from { opacity: 0; transform: translateX(-50%) scale(0.95);}
+            to { opacity: 1; transform: translateX(-50%) scale(1);}
+        }
+        .cerrar-popup {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #7bb6ff;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .cerrar-popup:hover {
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <a href="#" id="sobreMiBtn">Sobre mí</a>
+            </li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Recuadro flotante Sobre mí -->
+    <div id="sobreMiPopup" class="popup-sobre-mi" style="display:none;">
+        <button id="cerrarPopup" class="cerrar-popup">&times;</button>
+        <h2>Sobre mí</h2>
+        <p>
+            ¡Hola! Soy Juan, un apasionado desarrollador de software con experiencia en desarrollo web y móvil.<br>
+            Me encanta aprender nuevas tecnologías y crear soluciones innovadoras.<br>
+            En mi tiempo libre disfruto de la música, el cine y los videojuegos.
+        </p>
+    </div>
+    <div class="content">
+        <h1>Bienvenido a mi página personal</h1>
+        <p>Esta es una página de ejemplo con un fondo azul oscuro y un menú que sigue al usuario en todo momento.</p>
+        <div class="section">
+            <h2>Sobre mí</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur cursus, nisl erat dictum urna, at cursus enim erat nec urna. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam urna, eu aliquam nisl nisl eu urna.</p>
+            <p>Curabitur ac velit nec massa facilisis cursus. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam urna, eu aliquam nisl nisl eu urna.</p>
+        </div>
+        <div class="section">
+            <h2>Proyectos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur cursus, nisl erat dictum urna, at cursus enim erat nec urna.</p>
+            <ul>
+                <li>Proyecto 1: Descripción breve del proyecto.</li>
+                <li>Proyecto 2: Descripción breve del proyecto.</li>
+                <li>Proyecto 3: Descripción breve del proyecto.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través del correo electrónico: <a href="mailto:ejemplo@email.com" style="color:#7bb6ff;">ejemplo@email.com</a></p>
+            <p>O completa el siguiente formulario:</p>
+            <form>
+                <input type="text" placeholder="Tu nombre" style="padding:0.5em; border-radius:4px; border:none; margin-bottom:1em; width:100%;"><br>
+                <input type="email" placeholder="Tu correo" style="padding:0.5em; border-radius:4px; border:none; margin-bottom:1em; width:100%;"><br>
+                <textarea placeholder="Tu mensaje" style="padding:0.5em; border-radius:4px; border:none; width:100%; height:80px;"></textarea><br>
+                <button type="submit" style="padding:0.5em 1.5em; border-radius:4px; border:none; background:#284b8a; color:#fff; font-weight:bold; cursor:pointer;">Enviar</button>
+            </form>
+        </div>
+        <div class="section">
+            <h2>Más contenido</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur cursus, nisl erat dictum urna, at cursus enim erat nec urna.</p>
+            <p>Curabitur ac velit nec massa facilisis cursus. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam urna, eu aliquam nisl nisl eu urna.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur cursus, nisl erat dictum urna, at cursus enim erat nec urna.</p>
+            <p>Curabitur ac velit nec massa facilisis cursus. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam urna, eu aliquam nisl nisl eu urna.</p>
+        </div>
+    </div>
+    <script>
+        // Mostrar y ocultar el popup de Sobre mí
+        const sobreMiBtn = document.getElementById('sobreMiBtn');
+        const sobreMiPopup = document.getElementById('sobreMiPopup');
+        const cerrarPopup = document.getElementById('cerrarPopup');
+
+        sobreMiBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            sobreMiPopup.style.display = 'block';
+        });
+
+        cerrarPopup.addEventListener('click', function() {
+            sobreMiPopup.style.display = 'none';
+        });
+
+        // Opcional: cerrar el popup al hacer clic fuera de él
+        window.addEventListener('click', function(e) {
+            if (sobreMiPopup.style.display === 'block' && !sobreMiPopup.contains(e.target) && e.target !== sobreMiBtn) {
+                sobreMiPopup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
